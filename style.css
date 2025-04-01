@@ -1,0 +1,96 @@
+/* Apply a background that blends well with the image */
+body {
+    background: url('https://images.unsplash.com/photo-1465056836041-7f43ac27dcb5?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Glassmorphism container */
+.container {
+    background: rgba(247, 245, 245, 0.3);  /* 30% Grey */
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.2); /* 5% Black */
+    width: 350px;
+    text-align: center;
+    backdrop-filter: blur(10px); /* Glass effect */
+    border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+/* Input Box with Icons */
+.input-container {
+    position: relative;
+    width: 85%;
+    margin-bottom: 15px;
+}
+
+.input-container i {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #666;
+    font-size: 16px;
+}
+
+.input-container input {
+    width: 100%;
+    padding: 12px 12px 12px 40px; /* Space for icon */
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    outline: none;
+    font-size: 14px;
+    color: solid Black;
+}
+
+.input-container input::placeholder {
+    color: rgba(0, 0, 0, 0.7);
+}
+
+/* Buttons */
+button {
+    width: 100%;
+    padding: 12px;
+    background: rgba(106, 90, 205, 0.9); /* Soft purple */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.3s ease-in-out;
+}
+
+button:hover {
+    background: rgba(72, 61, 139, 0.9);
+}
+
+/* Links */
+a {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    font-size: 14px;
+    display: block;
+    margin-top: 10px;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Headings */
+h2 {
+    font-family: poppins;
+    color: solid black;
+    font-size: 40px;
+}
+
+/* Responsive Design */
+@media (max-width: 400px) {
+    .container {
+        width: 90%;
+    }
+}
