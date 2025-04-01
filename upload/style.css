@@ -1,0 +1,162 @@
+/* Apply a background that blends well with the image */
+body {
+    background: url('https://images.unsplash.com/photo-1465056836041-7f43ac27dcb5?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+}
+
+/* Glassmorphism container */
+.container {
+    background: rgba(200, 200, 200, 0.3); /* 30% Grey */
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.2); /* 5% Black */
+    width: 400px;
+    text-align: center;
+    backdrop-filter: blur(10px); /* Glass effect */
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+/* Headings */
+h2, h3 {
+    font-family: poppins;
+    margin-bottom: 20px;
+    color: solid black;
+    font-size:30px;
+}
+
+/* Drop Area */
+.drop-area {
+    border: 2px dashed rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+    padding: 25px;
+    background: rgba(255, 255, 255, 0.2);
+    margin-bottom: 20px;
+    transition: background 0.3s, border-color 0.3s;
+}
+
+.drop-area.dragover {
+    background: rgba(255, 255, 255, 0.3);
+    border-color: rgba(255, 255, 255, 0.6);
+}
+
+.drop-area p, .drop-area i {
+    margin: 10px 0;
+    color: solid black;
+}
+
+/* Buttons */
+button, .drop-area button {
+    padding: 10px 20px;
+    background: rgba(106, 90, 205, 0.9); /* Soft purple */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.3s ease-in-out;
+}
+
+button:hover, .drop-area button:hover {
+    background: rgba(72, 61, 139, 0.9);
+}
+
+/* File Name */
+#fileName {
+    margin-top: 10px;
+    color: white;
+    font-weight: bold;
+}
+
+/* List of Uploaded Files */
+ul {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+}
+
+ul li {
+    margin: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Resume Item */
+.resume-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    gap: 10px;
+}
+
+/* File Name Styling */
+.file-name {
+    max-width: 200px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    display: inline-block;
+    color: solid black;
+}
+
+/* Buttons for actions */
+.btn-download, ul li a {
+    background-color: rgba(106, 90, 205, 0.9);
+    color: white;
+    padding: 5px 10px;
+    text-decoration: none;
+    font-size: 13px; 
+    border-radius: 5px;
+}
+
+.btn-delete, ul li button {
+    background-color: rgba(255, 69, 58, 0.9);
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.btn-download:hover {
+    background: rgba(72, 61, 139, 0.9);
+}
+
+.btn-delete:hover {
+    background: rgba(200, 50, 50, 0.9);
+}
+
+/* Responsive Design */
+@media (max-width: 400px) {
+    .container {
+        width: 90%;
+    }
+}
+
+.logout-container {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.btn-logout {
+    background-color: rgba(106, 90, 205, 0.9);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.btn-logout:hover {
+    background-color: rgba(200, 50, 50, 0.9);
+}
