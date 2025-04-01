@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <meta charset = "UTF-8">
+        <title>Registration Form</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="container">
+            <h1>Registration Form</h1>
+            <form action="form.php" method="post">
+                <label for="name">Name:</label>
+                <input type="text" name="name" id="name" placeholder="Enter your Name" required>
+                <label for="email">Email:</label>
+                <input type="email" name="email" id="email" placeholder="Enter your Email" required>
+                <label for="password">Password:</label>
+                <input type="password" name="password" id="password" placeholder="Enter your Password" required>
+                <label for="confirm_password">Confirm Password:</label>
+                <input type="password" name="confirm_password" id="confirm_password" placeholder="Confirm your Password" required>
+                <button type="submit" value="Submit">Submit</button>
+            </form>
+        </div>
+    </body>
+</html>
